@@ -33,9 +33,9 @@ public class FuncionarioDAO implements DAO<Funcionario> {
     private Connection con;
 
     public FuncionarioDAO() {
-        String url = "jdbc:mysql://localhost:3306/HR";
+        String url = "jdbc:mysql://localhost:3306/HR?useTimezone=true&serverTimezone=UTC";
         String username = "root";
-        String password = "";
+        String password = "oracle_4U";
         try {
             con = DriverManager.getConnection(url, username, password);
         } catch (SQLException ex) {
